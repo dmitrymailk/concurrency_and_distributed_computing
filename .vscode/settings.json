@@ -1,0 +1,138 @@
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[plaintext]": {},
+  "[ruby]": {},
+  "editor.fontSize": 15,
+  "editor.minimap.enabled": false,
+  "emberRelatedFiles.showQuickPickForSingleOption": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "html"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.hbs": "handlebars",
+    "*.html": "html"
+  },
+  "git.autofetch": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "python.pythonPath": "C:\\Users\\dmitry\\Anaconda3",
+  "workbench.iconTheme": "vscode-icons",
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.jediEnabled": false,
+  "C_Cpp.updateChannel": "Insiders",
+  "code-runner.executorMap": {
+    // "cpp": "cd $dir && g++ -std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "cd $dir && g++ -fopenmp -std=c++17 *.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "python": "cd $dir && python $fileName"
+    // "python": "cd $dir && pocha $fileName"
+  },
+  "editor.suggest.statusBar.visible": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.exclude": {
+    "**.meta": true,
+    "**/.svn": false,
+    "**/**.meta": true
+  },
+  "search.exclude": {
+    "**.meta": true
+  },
+  "cloudcode.gke": {
+    "projectIds": ["uma-challenge-bot-258409"]
+  },
+  "cloudcode.autoDependencies": "on",
+  "editor.largeFileOptimizations": false,
+  "extensions.ignoreRecommendations": false,
+  "code-runner.executorMapByFileExtension": {},
+  "code-runner.executorMapByGlob": {},
+  "code-runner.saveAllFilesBeforeRun": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "python.languageServer": "Pylance",
+  "python.showStartPage": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": null,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "jupyter.askForKernelRestart": false,
+  "jupyter.alwaysTrustNotebooks": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editorAssociations": {
+    "*.fbx": "3dviewer.editor",
+    "*.ipynb": "jupyter-notebook",
+    "*.wasm": "default"
+  },
+  "sftp.downloadWhenOpenInRemoteExplorer": true,
+  "notebook.kernelProviderAssociations": [
+    {
+      "viewType": "jupyter-notebook",
+      "kernelProvider": "ms-toolsai.jupyter"
+    }
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "remote.SSH.defaultForwardedPorts": [22],
+  "tabnine.experimentalAutoImports": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "security.workspace.trust.enabled": false,
+  "python.defaultInterpreterPath": "C:\\Users\\dmitry\\Anaconda3",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Windows PowerShell": {
+      "path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    }
+  },
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "explorer.compactFolders": false,
+  "python.formatting.provider": "black",
+  "editor.detectIndentation": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
+  "julia.symbolCacheDownload": true,
+  "julia.enableTelemetry": true,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "notebook.lineNumbers": "on"
+
+  // vscode settings.json
+}
