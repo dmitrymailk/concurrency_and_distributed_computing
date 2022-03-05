@@ -16,7 +16,9 @@
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
     "*.hbs": "handlebars",
-    "*.html": "html"
+    "*.html": "html",
+    "iostream": "cpp",
+    "new": "cpp"
   },
   "git.autofetch": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
