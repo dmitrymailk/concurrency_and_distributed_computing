@@ -18,7 +18,8 @@
     "*.hbs": "handlebars",
     "*.html": "html",
     "iostream": "cpp",
-    "new": "cpp"
+    "new": "cpp",
+    "vector": "cpp"
   },
   "git.autofetch": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
