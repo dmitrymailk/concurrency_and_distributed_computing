@@ -19,7 +19,8 @@
     "*.html": "html",
     "iostream": "cpp",
     "new": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "omp.h": "c"
   },
   "git.autofetch": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
