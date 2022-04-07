@@ -57,7 +57,8 @@
     "stdexcept": "cpp",
     "streambuf": "cpp",
     "typeinfo": "cpp",
-    "list": "cpp"
+    "list": "cpp",
+    "mpi.h": "c"
   },
   "git.autofetch": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -73,7 +74,7 @@
   "C_Cpp.updateChannel": "Insiders",
   "code-runner.executorMap": {
     // "cpp": "cd $dir && g++ -std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "cpp": "cd $dir && g++ -fopenmp -std=c++17 *.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    // "cpp": "cd $dir && g++ -fopenmp -std=c++17 *.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     // "cpp": "cd $dir && g++ -I . -std=c++17 *.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "python": "cd $dir && python $fileName"
     // "python": "cd $dir && pocha $fileName"
