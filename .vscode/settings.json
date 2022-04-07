@@ -75,7 +75,8 @@
   "code-runner.executorMap": {
     "python": "cd $dir && python $fileName",
     "cpp": "cd $dir && mpicc *.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "c": "cd $dir && mpicc *.c -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+    "c": "cd $dir && mpicc $fileName -o $fileNameWithoutExt.o && mpiexec --oversubscribe -n 5 $dir$fileNameWithoutExt.o"
+    // "c": "cd $dir && mpirun $fileName -o $fileNameWithoutExt && $fileNameWithoutExt"
   },
   "editor.suggest.statusBar.visible": true,
   "[html]": {

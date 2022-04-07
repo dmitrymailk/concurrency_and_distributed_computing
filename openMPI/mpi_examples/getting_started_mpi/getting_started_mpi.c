@@ -7,7 +7,7 @@ int main(int argc, char **argv)
     // Initialize the MPI environment
     MPI_Init(NULL, NULL);
 
-    // Get the number of processes
+    // общее количество процессов
     int world_size;
     MPI_Comm_size(MPI_COMM_WORLD, &world_size);
 
