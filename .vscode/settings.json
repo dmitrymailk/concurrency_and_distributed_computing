@@ -73,11 +73,9 @@
   "python.jediEnabled": false,
   "C_Cpp.updateChannel": "Insiders",
   "code-runner.executorMap": {
-    // "cpp": "cd $dir && g++ -std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    // "cpp": "cd $dir && g++ -fopenmp -std=c++17 *.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    // "cpp": "cd $dir && g++ -I . -std=c++17 *.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "python": "cd $dir && python $fileName"
-    // "python": "cd $dir && pocha $fileName"
+    "python": "cd $dir && python $fileName",
+    "cpp": "cd $dir && mpicc *.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "c": "cd $dir && mpicc *.c -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
   },
   "editor.suggest.statusBar.visible": true,
   "[html]": {
@@ -175,7 +173,26 @@
   "julia.symbolCacheDownload": true,
   "julia.enableTelemetry": true,
   "editor.unicodeHighlight.ambiguousCharacters": false,
-  "notebook.lineNumbers": "on"
-
-  // vscode settings.json
+  "notebook.lineNumbers": "on",
+  "C_Cpp_Runner.cCompilerPath": "/usr/bin/gcc",
+  "C_Cpp_Runner.cppCompilerPath": "/usr/bin/g++",
+  "C_Cpp_Runner.debuggerPath": "/usr/bin/gdb",
+  "C_Cpp_Runner.cStandard": "",
+  "C_Cpp_Runner.cppStandard": "",
+  "C_Cpp_Runner.msvcBatchPath": "",
+  "C_Cpp_Runner.warnings": ["-Wall", "-Wextra", "-Wpedantic"],
+  "C_Cpp_Runner.enableWarnings": true,
+  "C_Cpp_Runner.warningsAsError": false,
+  "C_Cpp_Runner.compilerArgs": [],
+  "C_Cpp_Runner.linkerArgs": [],
+  "C_Cpp_Runner.includePaths": [],
+  "C_Cpp_Runner.includeSearch": ["*", "**/*"],
+  "C_Cpp_Runner.excludeSearch": [
+    "**/build",
+    "**/build/**",
+    "**/.*",
+    "**/.*/**",
+    "**/.vscode",
+    "**/.vscode/**"
+  ]
 }

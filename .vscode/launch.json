@@ -33,7 +33,7 @@
       "program": "/mnt/d/programming/concurrency/concurrency_and_distributed_computing/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
       "externalConsole": false,
       "setupCommands": [
         {
