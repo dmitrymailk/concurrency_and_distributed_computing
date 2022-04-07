@@ -58,7 +58,8 @@
     "streambuf": "cpp",
     "typeinfo": "cpp",
     "list": "cpp",
-    "mpi.h": "c"
+    "mpi.h": "c",
+    "cio.h": "c"
   },
   "git.autofetch": true,
   "javascript.updateImportsOnFileMove.enabled": "always",

@@ -14,9 +14,10 @@
 /* Header file for our I/O library */
 #include "cio.h"
 
-main(int argc, char* argv[]) {
-    MPI_Comm  io_comm;
-    int       i;
+main(int argc, char *argv[])
+{
+    MPI_Comm io_comm;
+    int i;
 
     MPI_Init(&argc, &argv);
 
@@ -25,7 +26,7 @@ main(int argc, char* argv[]) {
     Cache_io_rank(MPI_COMM_WORLD, io_comm);
 
     for (i = 0; i < argc; i++)
-        Cprintf(io_comm,"","argv[%d] = %s", i, argv[i]);
+        Cprintf(io_comm, "", "argv[%d] = %s", i, argv[i]);
 
     MPI_Finalize();
 }

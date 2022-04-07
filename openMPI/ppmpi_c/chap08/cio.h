@@ -19,39 +19,39 @@
 extern int IO_KEY;
 
 int Cache_io_rank(
-        MPI_Comm   orig_comm   /* in     */,
-        MPI_Comm   io_comm     /* in/out */);
+    MPI_Comm orig_comm /* in     */,
+    MPI_Comm io_comm /* in/out */);
 
 int Copy_attr(
-        MPI_Comm   comm1       /* in     */,
-        MPI_Comm   comm2       /* in/out */,
-        int        KEY         /* in     */);
+    MPI_Comm comm1 /* in     */,
+    MPI_Comm comm2 /* in/out */,
+    int KEY /* in     */);
 
 void Get_corresp_rank(
-        MPI_Comm   comm1       /* in  */,
-        int        rank1       /* in  */,
-        MPI_Comm   comm2       /* in  */,
-        int*       rank2_ptr   /* out */);
+    MPI_Comm comm1 /* in  */,
+    int rank1 /* in  */,
+    MPI_Comm comm2 /* in  */,
+    int *rank2_ptr /* out */);
 
 int Get_io_rank(
-        MPI_Comm io_comm      /* in  */,
-        int*     io_rank_ptr  /* out */);
+    MPI_Comm io_comm /* in  */,
+    int *io_rank_ptr /* out */);
 
 int Cscanf(
-        MPI_Comm  io_comm  /* in  */,
-        char*     prompt   /* in  */,
-        char*     format   /* in  */,
-                  ...      /* out */);
+    MPI_Comm io_comm /* in  */,
+    char *prompt /* in  */,
+    char *format /* in  */,
+    ... /* out */);
 
 int Cprintf(
-        MPI_Comm  io_comm  /* in */,
-        char*     title    /* in */,
-        char*     format   /* in */,
-                  ...      /* in */);
+    MPI_Comm io_comm /* in */,
+    char *title /* in */,
+    char *format /* in */,
+    ... /* in */);
 
 int Cerror_test(
-        MPI_Comm  io_comm       /* in */,
-        char*     routine_name  /* in */,
-        int       error         /* in */);
+    MPI_Comm io_comm /* in */,
+    char *routine_name /* in */,
+    int error /* in */);
 #endif
 /* End of io.h */

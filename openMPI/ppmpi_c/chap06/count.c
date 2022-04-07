@@ -10,7 +10,8 @@
 #include <stdio.h>
 #include "mpi.h"
 
-main(int argc, char* argv[]) {
+main(int argc, char *argv[])
+{
     float vector[100];
     MPI_Status status;
     int p;
@@ -22,18 +23,21 @@ main(int argc, char* argv[]) {
     MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
 
     /*  Initialize vector and send */
-    if (my_rank == 0) {
+    if (my_rank == 0)
+    {
         for (i = 0; i < 50; i++)
             vector[i] = 0.0;
         for (i = 50; i < 100; i++)
             vector[i] = 1.0;
-        MPI_Send(vector+50, 50, MPI_FLOAT, 1, 0,
-            MPI_COMM_WORLD); 
-    } else { /* my_rank == 1 */
-        MPI_Recv(vector+50, 50, MPI_FLOAT, 0, 0,
-            MPI_COMM_WORLD, &status);
+        MPI_Send(vector + 50, 50, MPI_FLOAT, 1, 0,
+                 MPI_COMM_WORLD);
+    }
+    else
+    { /* my_rank == 1 */
+        MPI_Recv(vector + 50, 50, MPI_FLOAT, 0, 0,
+                 MPI_COMM_WORLD, &status);
         for (i = 50; i < 100; i++)
-            printf("%3.1f ",vector[i]);
+            printf("%3.1f ", vector[i]);
         printf("\n");
     }
 
