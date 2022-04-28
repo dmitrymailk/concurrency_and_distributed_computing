@@ -1,0 +1,76 @@
+/*
+
+3°. В каждом подчиненном процессе даны четыре целых числа. Переслать эти числа в главный
+процесс, используя по одному вызову функции MPI_Send для каждого передающего процесса, и
+вывести их в главном процессе. Полученные числа выводить в порядке возрастания рангов
+переславших их процессов.
+
+*/
+
+#include <stdio.h>
+#include <mpi.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+	int ProcNum, ProcRank, RecvRank;
+	MPI_Status Status;
+	int N = 336;
+
+	MPI_Init(&argc, &argv);
+	MPI_Comm_size(MPI_COMM_WORLD, &ProcNum);
+	MPI_Comm_rank(MPI_COMM_WORLD, &ProcRank);
+
+	if (ProcRank == 0)
+	{
+		// Действия, выполняемые только процессом с рангом 0
+		while(1)
+		for (int i = 1; i < ProcNum; i++)
+		{
+			// получение сообщение из любого ресурса
+			// MPI_Recv(&RecvRank, 1, MPI_INT, MPI_ANY_SOURCE,
+			//          MPI_ANY_TAG, MPI_COMM_WORLD, &Status);
+
+			// получение сообщения из ресурса под номером i
+			int some[3];
+			MPI_Recv(&some, 3, MPI_INT, i,
+					 MPI_ANY_TAG, MPI_COMM_WORLD, &Status);
+			// for (int j = 0; j < 3; j++)
+			// {
+			printf("receive dataa from %d - x=%d y=%d z=%d\n", i, some[0], some[1], some[2]);
+			// }
+			printf("\n");
+			// printf("Hello from process %3d\n", RecvRank);
+		}
+	}
+	else
+	{
+		ProcRank -= 1;
+		for (int x = ProcRank * 100; x < (ProcRank + 1) * 100; x++)
+			for (int y = -N; y < N; y++)
+				for (int z = -N; z < N; z++)
+				{
+					if (x + y + z == 1000)
+					{
+						int some[3];
+						some[0] = x;
+						some[1] = y;
+						some[2] = z;
+
+						MPI_Send(&some, 3, MPI_INT, 0, 0, MPI_COMM_WORLD);
+					}
+				}
+
+		int some[3];
+		some[0] = 0;
+		some[1] = 0;
+		some[2] = 0;
+		MPI_Send(&some, 3, MPI_INT, 0, 0, MPI_COMM_WORLD);
+	}
+
+	MPI_Finalize();
+	// double time_mpi_end = MPI_Wtime();
+	// printf("Working time is %f on host %d\n", time_mpi_end - time_mpi_start, ProcRank);
+	return 0;
+}

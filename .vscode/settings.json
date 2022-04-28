@@ -59,7 +59,8 @@
     "typeinfo": "cpp",
     "list": "cpp",
     "mpi.h": "c",
-    "cio.h": "c"
+    "cio.h": "c",
+    "stdio.h": "c"
   },
   "git.autofetch": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -75,9 +76,8 @@
   "C_Cpp.updateChannel": "Insiders",
   "code-runner.executorMap": {
     "python": "cd $dir && python $fileName",
-    "cpp": "cd $dir && mpicc *.cpp -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "c": "cd $dir && mpicc $fileName -o $fileNameWithoutExt.o && mpiexec --oversubscribe -n 5 $dir$fileNameWithoutExt.o"
-    // "c": "cd $dir && mpirun $fileName -o $fileNameWithoutExt && $fileNameWithoutExt"
+    "cpp": "cd $dir && mpicc $fileName -o $fileNameWithoutExt && mpiexec -n 5 $dir$fileNameWithoutExt.o",
+    "c": "cd $dir && mpicc $fileName -o $fileNameWithoutExt.o && mpiexec -n 5 $dir$fileNameWithoutExt.o"
   },
   "editor.suggest.statusBar.visible": true,
   "[html]": {
@@ -187,7 +187,7 @@
   "C_Cpp_Runner.warningsAsError": false,
   "C_Cpp_Runner.compilerArgs": [],
   "C_Cpp_Runner.linkerArgs": [],
-  "C_Cpp_Runner.includePaths": [],
+  "C_Cpp_Runner.includePaths": ["/usr/include/x86_64-linux-gnu/mpich"],
   "C_Cpp_Runner.includeSearch": ["*", "**/*"],
   "C_Cpp_Runner.excludeSearch": [
     "**/build",
