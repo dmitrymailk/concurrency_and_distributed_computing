@@ -14,7 +14,6 @@ int main(int argc, char** argv)
             MPI_Recv(&number, 1, MPI_INT, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
             MPI_Recv(&recvRank, 1, MPI_INT, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
             if (recvRank == 2) {
-				// cout << endl << "Rank - " << recvRank << " Number: " << number;
 				printf("Rank - %d Number: %d\n", recvRank, number);
 			}
         }

@@ -76,6 +76,7 @@
   "C_Cpp.updateChannel": "Insiders",
   "code-runner.executorMap": {
     "python": "cd $dir && python $fileName",
+    // "cpp": "cd $dir && g++ *.cpp -o $fileNameWithoutExt.o && $dir$fileNameWithoutExt.o",
     "cpp": "cd $dir && mpicc $fileName -o $fileNameWithoutExt && mpiexec -n 5 $dir$fileNameWithoutExt.o",
     "c": "cd $dir && mpicc $fileName -o $fileNameWithoutExt.o && mpiexec -n 5 $dir$fileNameWithoutExt.o"
   },

@@ -32,8 +32,7 @@ int main(int argc, char** argv)
         MPI_Send(&digitsArray, 5, MPI_INT, 0, 0, MPI_COMM_WORLD);
     }
     else {
-        int number;
-        number = 0;
+        int number = 0;
         MPI_Send(&number, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
         MPI_Send(&procRank, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
     }

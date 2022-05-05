@@ -22,7 +22,7 @@ int main(int argc, char** argv)
         {
             MPI_Recv(&recvNum, 1, MPI_DOUBLE, i, 10, MPI_COMM_WORLD, &status);
             printf("Rank[%d]: %lf - from proc\n", i, recvNum);
-            MPI_Send(&sendNum, 1, MPI_DOUBLE, i, 11, MPI_COMM_WORLD);
+            MPI_Ssend(&sendNum, 1, MPI_DOUBLE, i, 11, MPI_COMM_WORLD);
         }
     }
     else
@@ -31,7 +31,7 @@ int main(int argc, char** argv)
 
         sendNum = (double)sendNum;
 
-        MPI_Send(&sendNum, 1, MPI_DOUBLE, 0, 10, MPI_COMM_WORLD);
+        MPI_Ssend(&sendNum, 1, MPI_DOUBLE, 0, 10, MPI_COMM_WORLD);
 
         MPI_Recv(&recvNum, 1, MPI_DOUBLE, 0, 11, MPI_COMM_WORLD, &status);
         printf("Rank[%d]: %lf - from main\n", procRank, recvNum);
